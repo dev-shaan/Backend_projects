@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<section class="hero-card">
+
+  <% if(locals.bandName){ %>
+    <h1>your band name is : <span class="band-name"><%= bandName %></span></h1>
+    <p class="subtitle">Tap again for a new name and keep the inspiration moving.</p>
+  <% }else{ %>
+    <h1>tap the button to generate your band name</h1>
+    <p class="subtitle">A clean little generator for quick creative ideas.</p>
+  <% } %>
+
+  <form action="/submit" method="POST" class="generator-form">
+    <input class="generate-button" type="submit" value="Generate Name">
+  </form>
+</section>
+
+<%- include("partials/footer.ejs") %>
+
+ 
